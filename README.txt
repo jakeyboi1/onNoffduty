@@ -6,6 +6,6 @@ This script is useful for setting up jobs that you want to recieve a paycheck on
 
 It does require VORP Core to work.
 
-Easy to install just add 'ensure onNoffduty' in your resource.cfg
+Easy to install just add this file to your resource file and then add 'ensure onNoffduty' in your resource.cfg
 
 You can have as many jobs configured as youd like.
