@@ -51,5 +51,5 @@ end)
 
 RegisterCommand("goingoffduty", function(source, args, rawCommand)
     local _source = source
-    ChangeDuty(_source, true)
+    ChangeDuty(_source, false)
 end)
