@@ -48,6 +48,7 @@ RegisterCommand("goingonduty", function(source, args, rawCommand)
     local _source = source
     ChangeDuty(_source, true)
     Text = 'Went on duty'
+    Player = _source
     webhook()
 end)
 
@@ -55,12 +56,13 @@ RegisterCommand("goingoffduty", function(source, args, rawCommand)
     local _source = source
     ChangeDuty(_source, false)
     Text = 'Went off duty'
+    Player = _source
     webhook()
 end)
 
 
-function webhook()
+function webhook(source)
     local _source = source --gets the players info
-    local Character = VORPcore.getUser(_source).getUsedCharacter --Pulls the character info
-    VORPcore.AddWebhook(Character.identifier, Webhooklink, Text .. Character.job)
+    local Character = VORPcore.getUser(Player).getUsedCharacter --Pulls the character info
+    VORPcore.AddWebhook(Character.firstname .. " " .. Character.lastname .. " " .. Character.identifier, Webhooklink, Text .. " " .. Character.job)
 end
