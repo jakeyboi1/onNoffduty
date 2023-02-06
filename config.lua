@@ -1,5 +1,8 @@
 Config = {}
 
+
+Webhooklink = ""
+
 Config.Jobs = {
     {
         job = 'conductor',
